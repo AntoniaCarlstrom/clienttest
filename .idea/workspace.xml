@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63735dc5-d197-4bfd-9282-8cd44cbcb8c7" name="Changes" comment="Updated project">
+    <list default="true" id="63735dc5-d197-4bfd-9282-8cd44cbcb8c7" name="Changes" comment="Removed while loop">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UserClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +53,13 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1679651287878</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="Removed while loop">
+      <created>1679651410956</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1679651410956</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -68,6 +75,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated project" />
+    <MESSAGE value="Removed while loop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed while loop" />
   </component>
 </project>
