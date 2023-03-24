@@ -26,6 +26,7 @@ public class UserClient {
                 urlMod = "users";
             }
             //Väljer användaren 2 behöver man göra ett val till, av ID.
+            // Använder else if istället för bara else för att ha möjlighet att enkelt göra fler alternativ i framtiden.
             else if (choice == 2) {
                 scanner.nextLine();
                 System.out.println("Ange ID på användare: ");
