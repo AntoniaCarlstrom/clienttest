@@ -24,21 +24,19 @@ public class UserClient {
             urlMod = "users";
         }
         else if (choice == 2) {
-            while (true) {
-                scanner.nextLine();
-                System.out.println("Ange ID på användare: ");
-                String choiceId = scanner.nextLine();
-                urlMod = "user?id=" + choiceId;
-                choice = 0;
-            }
-            } else{
-                System.out.println("Felaktigt val!");
+            scanner.nextLine();
+            System.out.println("Ange ID på användare: ");
+            String choiceId = scanner.nextLine();
+            urlMod = "user?id=" + choiceId;
+            choice = 0;
 
+        } else {
+            System.out.println("Felaktigt val!");
         }
+
         // Make a GET request to the /user endpoint with ID 1
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("http://localhost:8090/" + urlMod))
-
                 .GET()
                 .build();
 
