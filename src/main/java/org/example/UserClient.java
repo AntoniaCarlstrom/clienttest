@@ -9,11 +9,12 @@ import java.util.Scanner;
 public class UserClient {
 
     public static void main(String[] args) throws Exception {
-        HttpClient client = HttpClient.newHttpClient();
+//        HttpClient client = HttpClient.newHttpClient();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hej! Gör ett val.");
         System.out.println("1. Hämta alla användare.");
         System.out.println("2. Hämta användare med id (1-5).");
+
         int choice = scanner.nextInt();
         String urlMod = "null";
 
@@ -23,23 +24,26 @@ public class UserClient {
             urlMod = "users";
         }
         else if (choice == 2) {
-            System.out.println("Ange ID på användare: ");
-            String choiceId = scanner.nextLine();
-            urlMod = "user?id=" + choiceId;
+            while (true) {
+                scanner.nextLine();
+                System.out.println("Ange ID på användare: ");
+                String choiceId = scanner.nextLine();
+                urlMod = "user?id=" + choiceId;
+                choice = 0;
+            }
+            } else{
+                System.out.println("Felaktigt val!");
 
-        } else {
-            System.out.println("Felaktigt val!");
         }
-
-
         // Make a GET request to the /user endpoint with ID 1
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("http://localhost:8090/" + urlMod))
-                .uri(URI.create("http://localhost:8090/users"))
+
                 .GET()
                 .build();
 
         // Send the request and get the response
+        HttpClient client = HttpClient.newHttpClient();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
         // Print the response body
